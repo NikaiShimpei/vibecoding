@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 商品名を「人材の輝き」に変更 -->
+    <title>人材の輝き - プレミアムクラフトビール</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Noto Serif JP - 明朝体) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles */
+        body {
+            /* フォントを明朝体に指定 */
+            font-family: 'Noto Serif JP', serif;
+            background-color: #0a0d14;
+            color: #e0e0e0;
+        }
+        .hero-section {
+            /* 背景画像をGitHubのものに変更 */
+            background-image: linear-gradient(rgba(10, 13, 20, 0.6), rgba(10, 13, 20, 1)), url('https://github.com/NikaiShimpei/vibecoding/blob/59c57bb55b1d3b4f7e1992847ba3d206f03b4fe5/ChatGPT%20Image%202025%E5%B9%B47%E6%9C%881%E6%97%A5%2023_52_29.png?raw=true');
+            background-size: cover;
+            background-position: center;
+        }
+        .gold-text {
+            color: #d4af37;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        /* Scroll animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* YouTube動画のレスポンシブ対応 */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 アスペクト比 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* 診断コンテンツのスタイル */
+        .quiz-option {
+            border: 1px solid #4a5568;
+            transition: all 0.2s ease-in-out;
+        }
+        .quiz-option:hover {
+            background-color: #d4af37;
+            color: #0a0d14;
+            border-color: #d4af37;
+        }
+        .quiz-option input:checked + label {
+            background-color: #d4af37;
+            color: #0a0d14;
+            border-color: #d4af37;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-black bg-opacity-50 backdrop-blur-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- 商品名を「人材の輝き」に変更 -->
+            <h1 class="text-2xl font-bold gold-text tracking-wider">人材の輝き</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#concept" class="hover:gold-text transition-colors duration-300">コンセプト</a>
+                <a href="#movie" class="hover:gold-text transition-colors duration-300">CM</a>
+                <a href="#kodawari" class="hover:gold-text transition-colors duration-300">こだわり</a>
+                <a href="#diagnosis" class="hover:gold-text transition-colors duration-300">味タイプ診断</a>
+                <a href="#product" class="hover:gold-text transition-colors duration-300">商品情報</a>
+            </nav>
+            <a href="#" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">オンラインストア</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section h-screen flex items-center justify-center text-center">
+            <div class="fade-in">
+                <h2 class="text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-wider" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                    至福のひととき、<br><span class="gold-text">ここに極まる。</span>
+                </h2>
+                <p class="mt-6 text-lg md:text-xl max-w-2xl mx-auto text-gray-300">
+                    一口ごとに広がる、豊かな香りと深いコク。<br>醸造家の情熱が生んだ、最高傑作。
+                </p>
+            </div>
+        </section>
+
+        <!-- Concept Section -->
+        <section id="concept" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <div class="fade-in">
+                    <h3 class="section-title gold-text mb-6">CONCEPT</h3>
+                    <!-- コンセプトのテキストと改行位置を変更 -->
+                    <p class="text-4xl md:text-5xl font-bold mb-8 leading-relaxed">
+                        ただのビールではない。<br>それは、博報堂を彩る<br>「人材開発ビール」
+                    </p>
+                    <p class="max-w-3xl mx-auto text-lg leading-8 text-gray-400">
+                        私たちは、ビールがもたらす「時間」を大切にしています。慌ただしい日常から少しだけ離れ、自分と向き合う大切な時間。その瞬間にふさわしい、最高の一杯を届けたい。<br>そんな想いから「人材の輝き」は生まれました。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CM Movie Section -->
+        <section id="movie" class="py-20 md:py-32 bg-black bg-opacity-10">
+            <div class="container mx-auto px-6 text-center">
+                <div class="fade-in">
+                    <h3 class="section-title gold-text mb-12">CM MOVIE</h3>
+                    <!-- Responsive YouTube embed -->
+                    <div class="video-container max-w-4xl mx-auto shadow-2xl rounded-lg overflow-hidden">
+                        <iframe 
+                            src="https://www.youtube.com/embed/xHvN8naJ20w" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kodawari (Commitment) Section -->
+        <section id="kodawari" class="py-20 md:py-32 bg-black bg-opacity-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in">
+                    <h3 class="section-title gold-text">こだわり</h3>
+                    <p class="mt-4 text-xl text-gray-300">最高品質は、譲れない信念から生まれる。</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12 text-center">
+                    <!-- 1. Malt -->
+                    <div class="fade-in" style="transition-delay: 100ms;">
+                        <img src="https://github.com/NikaiShimpei/vibecoding/blob/6b60784c268255e42358971d3ab1a82f20a157c7/ChatGPT%20Image%202025%E5%B9%B47%E6%9C%881%E6%97%A5%2023_43_26.png?raw=true" alt="麦芽の画像" class="w-full h-48 object-cover rounded-lg mb-6 shadow-lg">
+                        <h4 class="text-2xl font-bold gold-text mb-3">厳選麦芽</h4>
+                        <p class="text-gray-400 leading-7">豊かなコクと甘みを引き出すため、選び抜かれた二条大麦麦芽を100%使用。じっくりと時間をかけて、その旨味を最大限に引き出します。</p>
+                    </div>
+                    <!-- 2. Hops -->
+                    <div class="fade-in" style="transition-delay: 200ms;">
+                        <img src="https://github.com/NikaiShimpei/vibecoding/blob/6b60784c268255e42358971d3ab1a82f20a157c7/ChatGPT%20Image%202025%E5%B9%B47%E6%9C%881%E6%97%A5%2023_43_36.png?raw=true" alt="ホップの画像" class="w-full h-48 object-cover rounded-lg mb-6 shadow-lg">
+                        <h4 class="text-2xl font-bold gold-text mb-3">アロマホップ</h4>
+                        <p class="text-gray-400 leading-7">華やかで気品ある香りを実現するため、世界でも希少なファインアロマホップを贅沢に使用。幾重にも重なる香りの層が、あなたを魅了します。</p>
+                    </div>
+                    <!-- 3. Water -->
+                    <div class="fade-in" style="transition-delay: 300ms;">
+                        <img src="https://github.com/NikaiShimpei/vibecoding/blob/6b60784c268255e42358971d3ab1a82f20a157c7/ChatGPT%20Image%202025%E5%B9%B47%E6%9C%881%E6%97%A5%2023_43_42.png?raw=true" alt="天然水の画像" class="w-full h-48 object-cover rounded-lg mb-6 shadow-lg">
+                        <h4 class="text-2xl font-bold gold-text mb-3">天然水醸造</h4>
+                        <p class="text-gray-400 leading-7">ビールの約9割を占める水。私たちは、地下深くから汲み上げた清冽な天然水のみを使用。素材の良さを引き立てる、清らかで柔らかな口当たりを生み出します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diagnosis Section -->
+        <section id="diagnosis" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <div class="fade-in">
+                    <h3 class="section-title gold-text mb-6">あなたの好みのビールの味タイプ診断</h3>
+                    <p class="max-w-2xl mx-auto text-lg leading-8 text-gray-400 mb-12">
+                        いくつかの簡単な質問に答えて、あなたにぴったりのビールを見つけましょう。
+                    </p>
+                </div>
+
+                <!-- Quiz Form -->
+                <div id="quiz-form" class="max-w-3xl mx-auto text-left fade-in">
+                    <!-- Question 1 -->
+                    <div class="mb-10">
+                        <h4 class="text-xl font-bold mb-4">Q1. ビールに求める一番のポイントは？</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q1" id="q1a" class="sr-only"><label for="q1a" class="block cursor-pointer p-4">A. キレと爽快感</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q1" id="q1b" class="sr-only"><label for="q1b" class="block cursor-pointer p-4">B. 豊かな香りとコク</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q1" id="q1c" class="sr-only"><label for="q1c" class="block cursor-pointer p-4">C. フルーティーな味わい</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q1" id="q1d" class="sr-only"><label for="q1d" class="block cursor-pointer p-4">D. 喉ごしの良さ</label></div>
+                        </div>
+                    </div>
+                    <!-- Question 2 -->
+                    <div class="mb-10">
+                        <h4 class="text-xl font-bold mb-4">Q2. どんな気分の時にビールを飲みたい？</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q2" id="q2a" class="sr-only"><label for="q2a" class="block cursor-pointer p-4">A. 仕事をやりきって達成感がある時</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q2" id="q2b" class="sr-only"><label for="q2b" class="block cursor-pointer p-4">B. 仲間と集まって語り合いたい時</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q2" id="q2c" class="sr-only"><label for="q2c" class="block cursor-pointer p-4">C. 一人でゆっくり考え事をしたい時</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q2" id="q2d" class="sr-only"><label for="q2d" class="block cursor-pointer p-4">D. とにかくリフレッシュしたい時</label></div>
+                        </div>
+                    </div>
+                    <!-- Question 3 -->
+                    <div class="mb-10">
+                        <h4 class="text-xl font-bold mb-4">Q3. ビールに合わせるなら、どんなおつまみ？</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q3" id="q3a" class="sr-only"><label for="q3a" class="block cursor-pointer p-4">A. 枝豆や唐揚げなど定番のもの</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q3" id="q3b" class="sr-only"><label for="q3b" class="block cursor-pointer p-4">B. チーズやナッツなど、香りの良いもの</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q3" id="q3c" class="sr-only"><label for="q3c" class="block cursor-pointer p-4">C. スパイシーなエスニック料理</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q3" id="q3d" class="sr-only"><label for="q3d" class="block cursor-pointer p-4">D. 素材の味を活かしたシンプルな料理</label></div>
+                        </div>
+                    </div>
+                    <!-- Question 4 -->
+                    <div class="mb-10">
+                        <h4 class="text-xl font-bold mb-4">Q4. 新しいプロジェクト。あなたならどう挑む？</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q4" id="q4a" class="sr-only"><label for="q4a" class="block cursor-pointer p-4">A. 緻密な計画とデータ分析で挑む</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q4" id="q4b" class="sr-only"><label for="q4b" class="block cursor-pointer p-4">B. チームの多様なアイデアを活かして挑む</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q4" id="q4c" class="sr-only"><label for="q4c" class="block cursor-pointer p-4">C. 直感とひらめきを信じて挑む</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q4" id="q4d" class="sr-only"><label for="q4d" class="block cursor-pointer p-4">D. まずは行動、試行錯誤しながら挑む</label></div>
+                        </div>
+                    </div>
+                    <!-- Question 5 -->
+                    <div class="mb-10">
+                        <h4 class="text-xl font-bold mb-4">Q5. あなたが仕事で最も輝く瞬間は？</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q5" id="q5a" class="sr-only"><label for="q5a" class="block cursor-pointer p-4">A. 難しい課題を解決した瞬間</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q5" id="q5b" class="sr-only"><label for="q5b" class="block cursor-pointer p-4">B. 新しいアイデアを形にした瞬間</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q5" id="q5c" class="sr-only"><label for="q5c" class="block cursor-pointer p-4">C. チームで大きな目標を達成した瞬間</label></div>
+                            <div class="quiz-option rounded-lg"><input type="radio" name="q5" id="q5d" class="sr-only"><label for="q5d" class="block cursor-pointer p-4">D. 自分の成長を実感した瞬間</label></div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-12">
+                        <button id="show-result-btn" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-12 rounded-lg transition-colors duration-300 text-lg">診断する</button>
+                    </div>
+                </div>
+
+                <!-- Result -->
+                <div id="quiz-result" class="hidden max-w-3xl mx-auto text-center fade-in">
+                    <h4 class="text-2xl font-bold mb-4">診断結果</h4>
+                    <p class="text-3xl md:text-4xl font-bold gold-text mb-8">あなたには「人材の輝き」がピッタリ！</p>
+                    <img src="https://github.com/NikaiShimpei/vibecoding/blob/6b60784c268255e42358971d3ab1a82f20a157c7/ChatGPT%20Image%202025%E5%B9%B47%E6%9C%881%E6%97%A5%2023_40_25.png?raw=true" alt="人材の輝き 製品缶の画像" class="rounded-lg shadow-2xl mx-auto mb-8 w-64">
+                    <p class="text-lg leading-8 text-gray-300">
+                        様々な挑戦を楽しむあなたには、一口ごとに新しい発見がある「人材の輝き」がおすすめです。<br>
+                        豊かな香りと深いコクは、あなたの創造性を刺激し、次への活力を与えてくれるでしょう。<br>
+                        仲間との語らいの場にも、自分と向き合う時間にも寄り添うこの一杯が、あなたの輝く瞬間をさらに彩ります。
+                    </p>
+                    <div class="mt-12">
+                        <a href="#product" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 text-lg">商品を詳しく見る</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Product Section -->
+        <section id="product" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 fade-in">
+                        <!-- 商品画像をGitHubのものに変更 -->
+                        <img src="https://github.com/NikaiShimpei/vibecoding/blob/6b60784c268255e42358971d3ab1a82f20a157c7/ChatGPT%20Image%202025%E5%B9%B47%E6%9C%881%E6%97%A5%2023_40_25.png?raw=true" alt="人材の輝き 製品缶の画像" class="rounded-lg shadow-2xl mx-auto">
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left fade-in" style="transition-delay: 200ms;">
+                        <h3 class="section-title gold-text mb-6">商品情報</h3>
+                        <!-- 商品名を「人材の輝き」に変更 -->
+                        <h4 class="text-4xl font-bold text-white mb-4">人材の輝き プレミアムクラフト</h4>
+                        <p class="text-gray-400 leading-8 mb-6">
+                            深く、濃密な時間のためのプレミアムビール。グラスに注いだ瞬間から立ち上る華やかな香りと、クリーミーな泡。口に含めば、麦芽の豊かなコクと甘み、そしてホップの上品な苦味が調和し、心地よい余韻が長く続きます。
+                        </p>
+                        <div class="text-left inline-block">
+                            <p class="mb-2"><span class="font-bold gold-text w-24 inline-block">品目:</span> ビール</p>
+                            <p class="mb-2"><span class="font-bold gold-text w-24 inline-block">原材料名:</span> 麦芽、ホップ</p>
+                            <p class="mb-2"><span class="font-bold gold-text w-24 inline-block">アルコール分:</span> 5.5%</p>
+                            <p><span class="font-bold gold-text w-24 inline-block">内容量:</span> 350ml / 500ml</p>
+                        </div>
+                        <div class="mt-8">
+                             <a href="#" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 text-lg">詳しく見る</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <!-- 商品名を「人材の輝き」に変更 -->
+            <p class="text-2xl font-bold gold-text tracking-wider mb-4">人材の輝き</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="hover:text-white transition-colors duration-300">X (Twitter)</a>
+                <a href="#" class="hover:text-white transition-colors duration-300">Instagram</a>
+                <a href="#" class="hover:text-white transition-colors duration-300">Facebook</a>
+            </div>
+            <p class="mb-2">お酒は20歳になってから。飲酒運転は法律で禁止されています。</p>
+            <p>&copy; 2024 Premium Craft Beer. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for scroll-triggered fade-in animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeInElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // Quiz logic
+            const showResultBtn = document.getElementById('show-result-btn');
+            const quizForm = document.getElementById('quiz-form');
+            const quizResult = document.getElementById('quiz-result');
+
+            showResultBtn.addEventListener('click', () => {
+                quizForm.classList.add('hidden');
+                quizResult.classList.remove('hidden');
+                quizResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        });
+    </script>
+
+</body>
+</html>
